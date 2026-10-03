@@ -7,6 +7,16 @@
 DeepSeek 或素材上游项目。当前发布 Windows 和 macOS 版本；独立桌宠需要
 Node.js、Python 3 和 PySide6，并可与 Codex 内置宠物并行使用。
 
+## 外观预览
+
+<p align="center">
+  <img src="docs/images/pet-states.webp" alt="Codex 大肥鱼独立桌宠的待机、思考、工作、等待和拖拽状态" width="900">
+</p>
+
+<p align="center">
+  <img src="docs/images/sprite-atlas.webp" alt="Codex 大肥鱼 v2 精灵图集预览" width="360">
+</p>
+
 ## 2.0.0 下载
 
 在 [v2.0.0 Release](https://github.com/aomeone/Independent-blue-fat-fish-desktop-pet-for-codex/releases/tag/v2.0.0)
