@@ -1,0 +1,12 @@
+{
+  "name": "codex-dafeiyu-pet",
+  "version": "2.0.0",
+  "platform": "macos",
+  "petId": "dafeiyu-whale-maid",
+  "displayName": "鲸鱼娘 · 大肥鱼",
+  "spriteVersionNumber": 2,
+  "releasedAt": "2026-10-02",
+  "installer": "install.command",
+  "uninstaller": "uninstall.command",
+  "appBundle": "Codex大肥鱼.app"
+}

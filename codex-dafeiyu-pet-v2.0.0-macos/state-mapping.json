@@ -1,0 +1,115 @@
+{
+  "formatVersion": 1,
+  "spriteVersionNumber": 2,
+  "atlas": {
+    "width": 1536,
+    "height": 2288,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "columns": 8,
+    "rows": 11
+  },
+  "taskStates": {
+    "idle": {
+      "codex_slot": "idle",
+      "action": "idle",
+      "meaning": "没有活动任务"
+    },
+    "thinking": {
+      "codex_slot": "review",
+      "action": "thinking",
+      "meaning": "供支持 review 槽位的渲染器显示问号思考动作；独立桌宠的整理阶段改用 working_command 贴图"
+    },
+    "working": {
+      "codex_slot": "running",
+      "action": "working",
+      "meaning": "当前 Codex Mini 将活动线程映射到 running，因此这里使用工作动作；独立桌宠仅在检测到 Codex 派生的活动 PowerShell 子进程时进入 WORKING"
+    },
+    "waiting": {
+      "codex_slot": "waiting",
+      "action": "waiting",
+      "meaning": "等待确认、权限或用户输入；独立桌宠没有活动 PowerShell 子进程时，等待下一步也使用 WAITING"
+    },
+    "error": {
+      "codex_slot": "failed",
+      "action": "error",
+      "meaning": "工具或任务失败"
+    }
+  },
+  "rows": [
+    {
+      "row": 0,
+      "slot": "idle",
+      "clip": "idle",
+      "frames": 6,
+      "meaning": "空闲"
+    },
+    {
+      "row": 1,
+      "slot": "running-right",
+      "clip": "dragging",
+      "frames": 8,
+      "meaning": "移动（向右）"
+    },
+    {
+      "row": 2,
+      "slot": "running-left",
+      "clip": "dragging",
+      "frames": 8,
+      "mirror": true,
+      "meaning": "移动（向左）"
+    },
+    {
+      "row": 3,
+      "slot": "waving",
+      "clip": "tail",
+      "frames": 4,
+      "meaning": "互动/提示"
+    },
+    {
+      "row": 4,
+      "slot": "jumping",
+      "clip": "success",
+      "frames": 5,
+      "meaning": "庆祝动作"
+    },
+    {
+      "row": 5,
+      "slot": "failed",
+      "clip": "error",
+      "frames": 8,
+      "meaning": "失败/错误"
+    },
+    {
+      "row": 6,
+      "slot": "waiting",
+      "clip": "waiting",
+      "frames": 6,
+      "meaning": "等待用户"
+    },
+    {
+      "row": 7,
+      "slot": "running",
+      "clip": "working",
+      "frames": 6,
+      "meaning": "活动中（工作动作）"
+    },
+    {
+      "row": 8,
+      "slot": "review",
+      "clip": "thinking",
+      "frames": 6,
+      "meaning": "审阅/问号提示"
+    }
+  ],
+  "builtinMini": {
+    "observedSourceStates": [
+      "idle",
+      "running"
+    ],
+    "activeSlot": "running",
+    "activeAnimation": "working",
+    "note": "当前 Codex Mini 状态选择器只暴露 idle/running；因此 running 使用工作动作，review 预留问号思考动作。独立桌宠以 Codex 派生的活动 PowerShell 子进程作为 WORKING 的唯一判据，数据库只负责区分 THINKING、整理和 WAITING。"
+  },
+  "limitation": "当前 Codex Mini 不向自定义 Pet 暴露独立 thinking/review 状态，也没有独立 success 槽位；完成后回到 idle。"
+}

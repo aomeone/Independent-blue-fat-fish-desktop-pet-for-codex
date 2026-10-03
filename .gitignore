@@ -1,0 +1,8 @@
+# Local build intermediates
+build/
+*.tmp
+*.log
+
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
