@@ -4,7 +4,8 @@
 线程历史和桌面进程状态，切换贴图来反映 Codex 的运行状态。
 
 这是一个非官方社区项目，不修改 Codex 安装目录，也不代表 Codex、OpenAI、
-DeepSeek 或素材上游项目。
+DeepSeek 或素材上游项目。当前发布 Windows 和 macOS 版本；独立桌宠需要
+Node.js、Python 3 和 PySide6，并可与 Codex 内置宠物并行使用。
 
 ## 2.0.0 下载
 
